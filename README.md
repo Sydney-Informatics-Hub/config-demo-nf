@@ -18,7 +18,7 @@ module load nextflow/24.10.0
 nextflow run main.nf -profile slurm --slurm_account <provide-account>
 ```
 
-To run locally on pbspro: 
+To run locally on Gadi: 
 ```
 module load nextflow
 

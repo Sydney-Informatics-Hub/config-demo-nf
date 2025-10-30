@@ -1,7 +1,5 @@
 #!/usr/bin/env nextflow
 
-params.in = "$baseDir/sequence.fa"
-
 // Split a fasta file into multiple files
 process splitSequences {
     publishDir "output"

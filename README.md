@@ -15,21 +15,21 @@ To run with slurm scheduler:
 ```
 module load nextflow/24.10.0
 
-nextflow run main.nf -profile slurm --setonix_account <provide-account>
+nextflow run main.nf -profile slurm --slurm_account <provide-account>
 ```
 
-To run locally on Gadi: 
+To run locally on pbspro: 
 ```
 module load nextflow
 
 nextflow run main.nf 
 ```
 
-To run with slurm scheduler: 
+To run with pbspro scheduler: 
 ```
 module load nextflow
 
-nextflow run main.nf -profile pbspro --gadi_account <provide-account>
+nextflow run main.nf -profile pbspro --pbspro_account <provide-account>
 ```
 
 

@@ -1,18 +1,21 @@
 #!/usr/bin/env nextflow
 
+// Define channels for input parameters
+Channel.fromPath(params.in)
+    .set { fasta_ch }
+
 // Split a fasta file into multiple files
 process splitSequences {
     publishDir "output"
 
     input:
-    path "${params.in}"
+    path fasta_file
 
     output:
     path 'seq_*'
 
     """
-    # Splits a multi-fasta file into individual sequence files, one per record
-    awk '/^>/{f="seq_"++d} {print > f}' < ${params.in}
+    awk '/^>/{f="seq_"++d} {print > f}' < ${fasta_file}
     """
 }
 

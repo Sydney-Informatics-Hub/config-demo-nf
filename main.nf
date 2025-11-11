@@ -21,5 +21,5 @@ workflow {
     // Define channels for input parameters
     fasta_ch = Channel.fromPath(params.in)
 
-    splitSequences(params.in)
+    splitSequences(fasta_ch)
 }
